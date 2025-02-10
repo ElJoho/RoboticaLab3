@@ -115,6 +115,20 @@ https://w3.cs.jmu.edu/spragunr/CS354_F17/handouts/ROSCheatsheet.pdf
 - *Paso 3. Inicialización del nodo:* `rospy.init_node('pysubpose', anonymous=False)`: Esta línea inicializa un nuevo nodo llamado 'pysubpose'. El argumento `anonymous=False` indica que el nombre del nodo no necesita ser único.
 - *Paso 4. Creación de un suscriptor:* `sub = rospy.Subscriber('turtle1/pose', Pose, poseMessageReceived)`: Crea un objeto suscriptor que escucha en el tópico `turtle1/pose` y utiliza la función `poseMessageReceived` para manejar los mensajes recibidos. Cada vez que un mensaje `Pose` es publicado en ese tópico, la función `poseMessageReceived` es llamada con el mensaje como argumento.
 - *Paso 5. Bucle de espera de eventos (spin):* `rospy.spin()`: Un bucle que mantiene el script ejecutándose y esperando por nuevos mensajes. A diferencia de otros bucles que manejan la frecuencia de ejecución manualmente, `rospy.spin()` simplemente bloquea y espera por eventos hasta que el nodo se apaga. Este método es útil cuando un nodo está dedicado principalmente a escuchar y procesar mensajes entrantes.
+```
+#!/usr/bin/python3
+import rospy
+from turtlesim.msg import Pose
+
+def poseMessageReceived(message):
+    rospy.loginfo('position=(' + str(message.x) + ',' + str(message.y) + ')' + ' direction=' + str(message.theta))
+
+if __name__ == '__main__':
+    rospy.init_node('pysubpose', anonymous=False)
+    sub = rospy.Subscriber('turtle1/pose', Pose, poseMessageReceived)
+    rospy.spin()
+
+```
 
 # Obteniendo dimensiones del plano con turtle_teleop_key y PYSUBPOSE.PY
 
