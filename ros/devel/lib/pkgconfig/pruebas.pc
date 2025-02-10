@@ -1,0 +1,8 @@
+prefix=/home/eljoho/Desktop/ros/devel
+
+Name: pruebas
+Description: Description of pruebas
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
