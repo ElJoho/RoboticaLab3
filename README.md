@@ -1,13 +1,10 @@
-# Laboratorio 2 A - Introducción a ROS
-# Fundamentos de Robótica Móvil
-# Abril 2024
+# Laboratorio No. 03 - 2024-II - Robotica de Desarrollo, Intro a ROS
+# Robotica
 ![](./Imgs/ESCUDO.png)
 
 # Integrantes:
+- Crisitian Cuestas
 - Johan López
-- David Cocoma
-- Joan Sebastián Jauregui
-- Felipe Cruz
 
 # Contenido
 En el repositorio de este laboratorio se encuentra lo siguiente:
