@@ -1,0 +1,2 @@
+pruebas
+-DCATKIN_DEVEL_PREFIX=/home/eljoho/Desktop/ros/devel -DCMAKE_INSTALL_PREFIX=/home/eljoho/Desktop/ros/install -G Unix Makefiles
