@@ -105,6 +105,31 @@ https://w3.cs.jmu.edu/spragunr/CS354_F17/handouts/ROSCheatsheet.pdf
      - `rospy.loginfo(...)`: Registra información sobre el mensaje de velocidad que se va a enviar. Es útil para depuración y seguimiento del comportamiento del nodo.
      - `pub.publish(msg)`: Publica el mensaje en el tópico `turtle1/cmd_vel`.
      - `rate.sleep()`: Espera lo suficiente para mantener la tasa de publicación deseada (2 Hz en este caso).
+    
+```
+#!/usr/bin/python3
+import rospy
+from geometry_msgs.msg import Twist
+from random import random
+if __name__ == '__main__':
+    # Create a publisher on topic turtle1/cmd_vel, type geometry_msgs/Twist
+    pub = rospy.Publisher('turtle1/cmd_vel', Twist, queue_size=1000)
+    rospy.init_node('pypubvel', anonymous=False)
+    rate = rospy.Rate(2)
+    # Similar to while(ros::ok())
+    while not rospy.is_shutdown():
+        # Create and populate new Twist message
+        msg = Twist()
+        msg.linear.x = random()
+        msg.angular.z = 2*random() - 1
+        # Similar to ROS_INFO_STREAM macro, log information.
+        rospy.loginfo('Sending random velocity command:' + ' linear=' + str(msg.linear.x) + ' angular=' + str(msg.angular.z))
+        # Publish the message and wait on rate.
+        pub.publish(msg)
+
+rate.sleep()
+
+```
 # Descripción del programa PYSUBPOSE.PY
 - *Paso 1. Importar módulos necesarios:*
   - `import rospy`: Importa la biblioteca rospy que permite usar Python para interactuar con ROS.
