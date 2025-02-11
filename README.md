@@ -72,6 +72,24 @@ Se escogió Miniforge3, una distribución de Conda/Mamba optimizada para usar el
 
 ## 2. Creación del canal 
 
+Para la creación del canal, en la terminal de Windows (no PowerShell) se ejecuta el siguiente comando:
+
+
+```shell
+conda install mamba -c conda-forge
+```
+
+Después de cerrar la terminal y abrir otra, se podría usar el comando `mamba`. PAra probar que funcione:
+
+
+```shell
+mamba --version
+```
+
+## 3. Instalación de ROS2 con RoboStack
+
+Seguir las instrucciones de [la página oficial de RoboStack](https://robostack.github.io/GettingStarted.html#__tabbed_1_1) desdes la sección 'Installation ros'.
+
 
 # Comandos ROS
 https://w3.cs.jmu.edu/spragunr/CS354_F17/handouts/ROSCheatsheet.pdf
