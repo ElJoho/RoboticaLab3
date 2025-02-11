@@ -47,6 +47,32 @@ ROS es un conjunto de herramientas y bibliotecas de software de código abierto 
 - **Flexibilidad y escalabilidad**: Adaptable a una variedad de plataformas y configuraciones de hardware, desde robots simples hasta sistemas complejos.
 - **Interoperabilidad**: Compatible con varios lenguajes de programación y sistemas de middleware, permitiendo la integración de diferentes componentes de software y hardware.
 
+# Instalación de ROS2 en una máquina con OS Windows 11
+
+Se escogió Miniforge3, una distribución de Conda/Mamba optimizada para usar el canal conda-forge, para instalar ROS 2 de forma sencilla, sin necesidad de usar Docker o WSL en Windows.
+
+## 1. Instalación de Miniforge3
+
+1. Descargar el instalador para windows desde [el repositorio oficial de Miniforge3](https://github.com/conda-forge/miniforge?tab=readme-ov-file#windows).
+
+2. Ejecutar el instalador.
+
+3. Dar click en el primer "Next" y leer y aceptar el "License Agreement".
+
+4. En el tipo de instalación, seleccionar "Just me (recommended)" y "Next".
+
+5. Determinar el directorio en donde se van a instalar los paquetes y "Next".
+
+6. Marcar las opciones de 
+
+    - Agregar Miniforge3 al PATH environment variable
+    - Registrar Miniforge3 como el Python por defecto 
+
+7. Dar click en instalar y esperar a que se realice la instalación
+
+## 2. Creación del canal 
+
+
 # Comandos ROS
 https://w3.cs.jmu.edu/spragunr/CS354_F17/handouts/ROSCheatsheet.pdf
 
